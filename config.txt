@@ -25,24 +25,4 @@
 "note_ch": "",
 # 金句英文
 "note_en": ""
-#字体颜色:使用RGB颜色（如#000000黑色），留空颜色默认随机
-"color_date":                     "",
-"color_region":                     "",
-"color_weather":                     "",
-"color_temp":                     "",
-"color_wind":                     "",
-"color_note_en":                     "",
-"color_note_zh":                     "",
-"color_max_temp":                     "",
-"color_sunrise":                     "",
-"color_sunset":                     "",
-"color_category":                     "",
-"color_pm2p5":                     "",
-"color_proposal":                     "",
-"color_chp":                     "",
-"color_birthday1":                     "",
-"color_birthday2":                     "",
-"color_daily_love":                     "",
-"color_commemoration_day1":                     "",
-"color_commemoration_day2":                     "",
 }
