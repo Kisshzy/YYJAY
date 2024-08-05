@@ -318,7 +318,7 @@ if __name__ == "__main__":
         # 获取词霸每日金句
         note_ch, note_en = get_ciba()
     chp = get_tianhang()
-	daily_love = get_daily_love()
+    daily_love = get_daily_love()
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, region, weather, temp, wind_dir, note_ch, note_en, max_temp, min_temp, sunrise,
