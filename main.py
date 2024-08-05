@@ -168,7 +168,7 @@ def get_ciba():
 
 
 def send_message(to_user, access_token, region_name, weather, temp, wind_dir, note_ch, note_en, max_temp, min_temp,
-                 sunrise, sunset, category, pm2p5, proposal, chp):
+                 sunrise, sunset, category, pm2p5, proposal, daily_love, chp):
     url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     year = localtime().tm_year
@@ -226,10 +226,6 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "value": note_ch,
                 "color": get_color()
             },
-			 "today_note": {
-                "value": get_daily_love()
-				"color": get_color()
-			},
             "max_temp": {
                 "value": max_temp,
                 "color": get_color()
@@ -258,6 +254,10 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "value": proposal,
                 "color": get_color()
             },
+			"daily_love": {
+                "value": daily_love,
+				"color": get_color()
+			},
             "chp": {
                 "value": chp,
                 "color": get_color()
@@ -318,8 +318,9 @@ if __name__ == "__main__":
         # 获取词霸每日金句
         note_ch, note_en = get_ciba()
     chp = get_tianhang()
+	daily_love = get_daily_love()
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, region, weather, temp, wind_dir, note_ch, note_en, max_temp, min_temp, sunrise,
-                     sunset, category, pm2p5, proposal, chp)
+                     sunset, category, pm2p5, proposal, daily_love, chp)
     os.system("pause")
