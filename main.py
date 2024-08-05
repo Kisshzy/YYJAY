@@ -254,10 +254,10 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "value": proposal,
                 "color": get_color()
             },
-			"daily_love": {
+            "daily_love": {
                 "value": daily_love,
-				"color": get_color()
-			},
+		"color": get_color()
+            },
             "chp": {
                 "value": chp,
                 "color": get_color()
